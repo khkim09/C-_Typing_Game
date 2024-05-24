@@ -1,4 +1,9 @@
 # C#_Typing_Game
 
-### WinformÀ» ÀÌ¿ëÇÑ »ê¼ººñ °ÔÀÓ
+### Winformì„ ì´ìš©í•œ ì‚°ì„±ë¹„ ê²Œì„
 
+> - groupBoxì™€ textBox, Label, Timer, button, progressBar ì»¨íŠ¸ë¡¤ì„ ì´ìš©
+> - Font : ë§‘ì€ ê³ ë”•, 10pt, style = Bold
+
+![image](https://github.com/khkim09/Typing_Game/assets/67762639/2607934b-9514-4b9a-a67e-763cfbab6046)
+![image](https://github.com/khkim09/Typing_Game/assets/67762639/e3404030-e4db-409b-8da2-9acb0882dac6)
