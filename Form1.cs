@@ -112,7 +112,7 @@ namespace C__Typing_Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string filePath = @"ko.txt";
+            string filePath = @"..\..\ko.txt";
             if (File.Exists(filePath))
             {
                 words = File.ReadAllLines(filePath).ToList();
