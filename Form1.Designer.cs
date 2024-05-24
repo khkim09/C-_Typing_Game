@@ -32,14 +32,14 @@
             this.grpBoard = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.grpPresentScore = new System.Windows.Forms.GroupBox();
+            this.presentPgBar = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pMiss = new System.Windows.Forms.Label();
+            this.pTotal = new System.Windows.Forms.Label();
             this.pScore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pTotal = new System.Windows.Forms.Label();
-            this.pMiss = new System.Windows.Forms.Label();
-            this.presentPgBar = new System.Windows.Forms.ProgressBar();
             this.grpBestScore = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -92,6 +92,14 @@
             this.grpPresentScore.TabStop = false;
             this.grpPresentScore.Text = "Present Score";
             // 
+            // presentPgBar
+            // 
+            this.presentPgBar.Location = new System.Drawing.Point(59, 152);
+            this.presentPgBar.Name = "presentPgBar";
+            this.presentPgBar.Size = new System.Drawing.Size(130, 24);
+            this.presentPgBar.TabIndex = 0;
+            this.presentPgBar.Value = 100;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -119,6 +127,26 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Total :";
             // 
+            // pMiss
+            // 
+            this.pMiss.AutoSize = true;
+            this.pMiss.Location = new System.Drawing.Point(130, 115);
+            this.pMiss.Name = "pMiss";
+            this.pMiss.Size = new System.Drawing.Size(17, 19);
+            this.pMiss.TabIndex = 0;
+            this.pMiss.Text = "0";
+            this.pMiss.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pTotal
+            // 
+            this.pTotal.AutoSize = true;
+            this.pTotal.Location = new System.Drawing.Point(130, 75);
+            this.pTotal.Name = "pTotal";
+            this.pTotal.Size = new System.Drawing.Size(17, 19);
+            this.pTotal.TabIndex = 0;
+            this.pTotal.Text = "0";
+            this.pTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pScore
             // 
             this.pScore.AutoSize = true;
@@ -137,34 +165,6 @@
             this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Score :";
-            // 
-            // pTotal
-            // 
-            this.pTotal.AutoSize = true;
-            this.pTotal.Location = new System.Drawing.Point(130, 75);
-            this.pTotal.Name = "pTotal";
-            this.pTotal.Size = new System.Drawing.Size(17, 19);
-            this.pTotal.TabIndex = 0;
-            this.pTotal.Text = "0";
-            this.pTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pMiss
-            // 
-            this.pMiss.AutoSize = true;
-            this.pMiss.Location = new System.Drawing.Point(130, 115);
-            this.pMiss.Name = "pMiss";
-            this.pMiss.Size = new System.Drawing.Size(17, 19);
-            this.pMiss.TabIndex = 0;
-            this.pMiss.Text = "0";
-            this.pMiss.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // presentPgBar
-            // 
-            this.presentPgBar.Location = new System.Drawing.Point(59, 152);
-            this.presentPgBar.Name = "presentPgBar";
-            this.presentPgBar.Size = new System.Drawing.Size(130, 24);
-            this.presentPgBar.TabIndex = 0;
-            this.presentPgBar.Value = 100;
             // 
             // grpBestScore
             // 
@@ -297,7 +297,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "산성비 게임";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.grpBoard.ResumeLayout(false);
             this.grpBoard.PerformLayout();
             this.grpPresentScore.ResumeLayout(false);
