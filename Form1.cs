@@ -284,8 +284,11 @@ namespace C__Typing_Game
                 RestartGame();
             else // 'No' 클릭 시 게임 재개
             {
-                timer1.Start();
-                wordCreationTimer.Start();
+                if (!grpBoard.Controls.ContainsKey("gameOverLabel"))
+                {
+                    timer1.Start();
+                    wordCreationTimer.Start();
+                }
             }
         }
 
@@ -298,8 +301,11 @@ namespace C__Typing_Game
                 this.Close();
             else // 게임 재개
             {
-                timer1.Start();
-                wordCreationTimer.Start();
+                if (!grpBoard.Controls.ContainsKey("gameOverLabel"))
+                {
+                    timer1.Start();
+                    wordCreationTimer.Start();
+                }
             }
         }
 
