@@ -169,12 +169,12 @@ namespace C__Typing_Game
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e) // 단어 입력창
         {
-            if (e.KeyCode == Keys.Enter) // 산성비 단어와 일치 시, RemoveMatchingWord() 호출
+            if (e.KeyCode == Keys.Enter) // textBox Enter키 입력 시
             {
-                string enteredWord = textBox1.Text.Trim();
+                string enteredWord = textBox1.Text.Trim(); // 단어 슬라이싱 후
                 if (!string.IsNullOrEmpty(enteredWord))
                 {
-                    RemoveMatchingWord(enteredWord);
+                    RemoveMatchingWord(enteredWord); // RemoveMatchingWord() 호출 - 일치 단어 제거
                     textBox1.Clear();
                 }
             }
