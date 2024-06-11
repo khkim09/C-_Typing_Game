@@ -11,3 +11,4 @@
 
 - issues
 	- "GameOver"상태로 restart > no || quit > no 클릭 시 timer 재시작 오류 수정 (05.30)
+	- Missed가 항상 HP - 5 : Game Over시 20개 Miss 고정 (단어 길이 별 체력 감소, 체력 증가 추가 - 06.11)
