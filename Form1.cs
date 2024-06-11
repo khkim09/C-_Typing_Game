@@ -25,6 +25,7 @@ namespace C__Typing_Game
         // Stats 클래스 선언
         public class Stats
         {
+            // 데이터 멤버 변수
             public int Total { get; private set; }
             public int Score { get; private set; }
             public int Missed { get; private set; }
@@ -37,7 +38,7 @@ namespace C__Typing_Game
 
             public event Action OnGameOver;
 
-            public Stats(Label totalLabel, Label scoreLabel, Label missedLabel, ProgressBar hpProgressBar) // 초기값 세팅
+            public Stats(Label totalLabel, Label scoreLabel, Label missedLabel, ProgressBar hpProgressBar) // 생성자 - 초기값 세팅 (초기화)
             {
                 this.totalLabel = totalLabel;
                 this.scoreLabel = scoreLabel;
@@ -53,6 +54,7 @@ namespace C__Typing_Game
                 UpdateProgressBar();
             }
 
+            // 멤버 함수
             public void IncrementTotal()
             {
                 Total++;
