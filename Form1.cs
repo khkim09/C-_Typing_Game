@@ -271,8 +271,9 @@ namespace C__Typing_Game
                 bTotal.Text = bestTotal.ToString();
                 bMiss.Text = bestMiss.ToString();
             }
-            if (currentScore == bestScore) // 현재 점수 == 기존 최고 점수 일 경우,
-                if (stats.Total > bestTotal) // 생성된 단어 (산성비) 수가 많은 쪽이 최고 점수로 갱신
+            else if (currentScore == bestScore) // 현재 점수 == 기존 최고 점수 일 경우,
+            {
+                if (stats.Missed < bestMiss) // 놓친 단어 적은 쪽이 최고 점수로 갱신
                 {
                     bestScore = currentScore;
                     bestTotal = stats.Total;
@@ -282,6 +283,20 @@ namespace C__Typing_Game
                     bTotal.Text = bestTotal.ToString();
                     bMiss.Text = bestMiss.ToString();
                 }
+                else if (stats.Missed == bestMiss) // 놓친 단어 수도 같을 경우,
+                {
+                    if (stats.Total > bestTotal) // 생성된 단어 (산성비) 수가 많은 쪽이 최고 점수로 갱신
+                    {
+                        bestScore = currentScore;
+                        bestTotal = stats.Total;
+                        bestMiss = stats.Missed;
+
+                        bScore.Text = bestScore.ToString();
+                        bTotal.Text = bestTotal.ToString();
+                        bMiss.Text = bestMiss.ToString();
+                    }
+                }
+            }
         }
 
         private void btnRestart_Click(object sender, EventArgs e) // Restart Button 클릭 구현
