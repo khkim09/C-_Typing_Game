@@ -61,16 +61,22 @@ namespace C__Typing_Game
                 UpdateLabels();
             }
 
-            public void IncrementScore(int wordLength) // 단어 길이 당 10점 추가
+            public void IncrementScore(int wordLength) // 단어 길이 당 10점 추가, 체력 증가
             {
                 Score += 10 * wordLength;
+                HP += (wordLength / 2);
+
+                if (HP > 100)
+                    HP = 100;
+
                 UpdateLabels();
+                UpdateProgressBar();
             }
 
-            public void IncrementMissed() // 단어 놓칠 시, 체력 -5
+            public void IncrementMissed(int wordLength) // 단어 놓칠 시, 단어 길이 X 4 체력 감소
             {
                 Missed++;
-                HP -= 5;
+                HP -= (4 * wordLength); // 체력 감소
 
                 if (HP < 0)
                     HP = 0;
@@ -150,10 +156,11 @@ namespace C__Typing_Game
 
                 if (label.Location.Y + label.Height > grpBoard.Height) // 바닥에 닿을 시, IncrementMissed() 호출 (체력 감소)
                 {
+                    string missedWord = label.Text;
                     fallingWords.RemoveAt(i);
                     grpBoard.Controls.Remove(label);
                     label.Dispose();
-                    stats.IncrementMissed();
+                    stats.IncrementMissed(missedWord.Length);
                 }
             }
 
